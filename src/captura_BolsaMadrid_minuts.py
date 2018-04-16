@@ -26,7 +26,7 @@ fileName = strftime("%Y-%m-%d")+'_ibex35_minuts.csv'
 logFile = open(strftime("%Y-%m-%d")+'_ibex35_minuts_log.txt','a')         
 
 saveToCSV (fileName, minData)
-print strftime("%H:%M"), "Arxiu creat"
+print strftime("%H:%M"), " Arxiu creat"
 logFile.write(strftime("%H:%M")+" Arxiu creat")
 
 mercatTancat = False 
@@ -101,8 +101,8 @@ while mins < 1440 :
         mercatTancat = False
         mercatObert = True
         saveToCSV(fileName, minData)
-        print strftime("%H:%M"),"Actualitzat", "comptInici", comptTancatInici, "comptFinal", comptTancatFinal        
-        logFile.write("\n"+strftime("%H:%M")+"Actualitzat comptInici "+ str(comptTancatInici)+ " comptFinal "+ str(comptTancatFinal))
+        print strftime("%H:%M"),"Actualitzat comptInici ", comptTancatInici, " comptFinal ", comptTancatFinal        
+        logFile.write("\n"+strftime("%H:%M")+" Actualitzat comptInici "+ str(comptTancatInici)+ " comptFinal "+ str(comptTancatFinal))
 
         
     if comptTancatInici > 1 : 
@@ -121,7 +121,7 @@ while mins < 1440 :
         time.sleep(60)
         mins +=1 
         print strftime("%H:%M"),"Actualitzat", "comptInici", comptTancatInici, "comptFinal", comptTancatFinal        
-        logFile.write("\n"+strftime("%H:%M")+"Actualitzat"+ "comptInici"+ str(comptTancatInici)+ "comptFinal"+ str(comptTancatFinal))
+        logFile.write("\n"+strftime("%H:%M")+" Actualitzat"+ "comptInici"+ str(comptTancatInici)+ "comptFinal"+ str(comptTancatFinal))
 
 print strftime("%H:%M"), "Arxiu tancat", "comptInici", comptTancatInici, "comptFinal", comptTancatFinal
 logFile.write("\n"+strftime("%H:%M")+ " Arxiu tancat "+ " comptInici "+ str(comptTancatInici)+ " comptFinal "+ str(comptTancatFinal))   
